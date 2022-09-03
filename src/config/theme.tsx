@@ -73,7 +73,7 @@ export const theme = createTheme({
     },
     h3: {
       fontSize: 24,
-      color: '#ff9c00'
+      color: '#FFF'
     }
   }
 })

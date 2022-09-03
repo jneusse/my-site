@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from './config/theme'
-import About from './componets/About'
+import Home from './componets/Home'
 import Header from './componets/Header'
 import './scss/app.scss'
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Header />
-        <About />
+        <Home />
       </ThemeProvider>
     </div>
   )

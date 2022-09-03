@@ -8,6 +8,7 @@ import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Fade from '@mui/material/Fade'
 import { styled } from '@mui/material/styles'
+import { Grid } from '@mui/material'
 
 interface Props {
   window?: () => Window
@@ -95,10 +96,12 @@ const Header = (props: Props) => {
       <CustomAppBar color="transparent">
         <Container>
           <Toolbar>
-            <CustomButton>Home</CustomButton>
-            <CustomButton>About</CustomButton>
-            <CustomButton>Resume</CustomButton>
-            <CustomButton>Contact</CustomButton>
+            <Grid container direction="row" justifyContent="center">
+              <CustomButton>Home</CustomButton>
+              <CustomButton>About</CustomButton>
+              <CustomButton>Resume</CustomButton>
+              <CustomButton>Contact</CustomButton>
+            </Grid>
           </Toolbar>
         </Container>
       </CustomAppBar>
