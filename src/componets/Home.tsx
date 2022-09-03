@@ -37,6 +37,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                 alt="Jesus Eusse Developer"
                 src="/img/me and github.png"
                 sx={{ width: '600px', height: '600px' }}
+                className="animate__animated animate__backInLeft"
               />
             </Box>
           </Grid>
@@ -55,7 +56,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                 </Typography>
                 <Grid>
                   <Typography variant="h3" align="left">
-                    I am a Full Stack Developer.Well-qualified Full Stack
+                    I am a Full Stack Developer. Well-qualified Full Stack
                     Developer, familiar with wide range of programming utilities
                     and languages. Knowledgeable of backend and frontend
                     development requirements.
