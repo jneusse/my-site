@@ -60,8 +60,8 @@ export const theme = createTheme({
       default: '#000000'
     },
     neutral: {
-      main: '#64748B',
-      contrastText: '#fff'
+      main: '#292929',
+      contrastText: '#3c3c3c'
     }
   },
   typography: {

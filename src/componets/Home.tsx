@@ -22,7 +22,8 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
     <Box
       sx={{
         width: '100%',
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        padding: '24px 0'
       }}
     >
       <Container>
@@ -37,7 +38,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                 alt="Jesus Eusse Developer"
                 src="/img/me and github.png"
                 sx={{ width: '600px', height: '600px' }}
-                className="animate__animated animate__backInLeft"
+                className="animate__animated animate__backInLeft animate__delay-1s"
               />
             </Box>
           </Grid>
@@ -50,7 +51,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
             alignItems="center"
           >
             <Grid item>
-              <CustomBox>
+              <CustomBox className="animate__animated animate__backInRight animate__delay-1s">
                 <Typography variant="h2" align="left">
                   Hi, I'm Jesus Eusse
                 </Typography>
