@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles'
+import { fontWeight } from '@mui/system'
 declare module '@mui/material/styles' {
   interface Theme {
     status: {
@@ -8,9 +9,11 @@ declare module '@mui/material/styles' {
 
   interface Palette {
     neutral: Palette['primary']
+    vino: Palette['primary']
   }
   interface PaletteOptions {
     neutral: PaletteOptions['primary']
+    vino: PaletteOptions['primary']
   }
 
   interface PaletteColor {
@@ -24,6 +27,12 @@ declare module '@mui/material/styles' {
       danger: React.CSSProperties['color']
     }
   }
+  interface TypographyVariants {
+    li: React.CSSProperties
+  }
+  interface TypographyVariantsOptions {
+    li?: React.CSSProperties
+  }
 }
 
 export const theme = createTheme({
@@ -36,7 +45,7 @@ export const theme = createTheme({
       darker: '#c57a01'
     },
     secondary: {
-      main: '#ff0000',
+      main: '#005656',
       darker: '#b30000'
     },
     error: {
@@ -62,6 +71,9 @@ export const theme = createTheme({
     neutral: {
       main: '#292929',
       contrastText: '#3c3c3c'
+    },
+    vino: {
+      main: '#560010'
     }
   },
   typography: {
@@ -80,6 +92,16 @@ export const theme = createTheme({
     },
     h4: {
       fontSize: 24,
+      color: '#ff9c00'
+    },
+    h5: {
+      fontSize: 16,
+      color: '#ff9c00',
+      fontWeight: 800,
+      fontFamily: 'Helvetica'
+    },
+    li: {
+      fontSize: 16,
       color: '#ff9c00'
     }
   }

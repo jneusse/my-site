@@ -39,7 +39,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
             spacing={{ xs: 2 }}
             height="100%"
           >
-            <Grid xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <Box mx="auto">
                 <CustomAvatar
                   alt="Jesus Eusse Developer"
@@ -50,6 +50,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
               </Box>
             </Grid>
             <Grid
+              item
               xs={12}
               md={6}
               container
