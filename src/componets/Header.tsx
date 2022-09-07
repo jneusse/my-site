@@ -9,6 +9,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Fade from '@mui/material/Fade'
 import { styled } from '@mui/material/styles'
 import { Grid } from '@mui/material'
+import { theme } from '../config/theme'
 
 interface Props {
   window?: () => Window
@@ -51,6 +52,7 @@ function ScrollTop(props: Props) {
 const CustomAppBar = styled(AppBar)(
   ({ theme }) => `
   box-shadow: none;
+  background-color: ${theme.palette.background.default};
 `
 )
 
@@ -93,7 +95,7 @@ const CustomButton = styled(ButtonUnstyled)(
 const Header = (props: Props) => {
   return (
     <>
-      <CustomAppBar color="transparent">
+      <CustomAppBar>
         <Container>
           <Toolbar>
             <Grid container direction="row" justifyContent="center">

@@ -24,15 +24,13 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
         width: '100%',
         backgroundColor: 'transparent',
         padding: '24px 0',
-        height: '600px',
-        position: 'relative'
+        height: '600px'
       }}
     >
       <Box
         sx={{
           width: '100%',
-          position: 'fixed',
-          zIndex: '-100'
+          position: 'fixed'
         }}
       >
         <Container>

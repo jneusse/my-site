@@ -5,6 +5,7 @@ import Header from './componets/Header'
 import './scss/app.scss'
 import 'animate.css'
 import About from './componets/About'
+import Resume from './componets/Resume'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Home />
         <About />
+        <Resume />
       </ThemeProvider>
     </div>
   )

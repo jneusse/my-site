@@ -66,6 +66,9 @@ export const theme = createTheme({
   },
   typography: {
     fontSize: 12,
+    body1: {
+      color: '#FFFFFF'
+    },
     fontFamily: '"Encode Sans Expanded", "Helvetica", "Arial", sans-serif',
     h2: {
       fontSize: 36,
@@ -74,6 +77,10 @@ export const theme = createTheme({
     h3: {
       fontSize: 24,
       color: '#FFF'
+    },
+    h4: {
+      fontSize: 24,
+      color: '#ff9c00'
     }
   }
 })

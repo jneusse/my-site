@@ -6,6 +6,7 @@ const AboutBox = styled(Box)(
   ({ theme }) => `
     background-color: ${theme.palette.neutral.main};
     padding: 48px;
+    position: relative;
 `
 )
 
