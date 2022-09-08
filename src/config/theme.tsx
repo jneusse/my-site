@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles'
-import { fontWeight } from '@mui/system'
 declare module '@mui/material/styles' {
   interface Theme {
     status: {

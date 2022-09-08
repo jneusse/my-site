@@ -9,7 +9,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Fade from '@mui/material/Fade'
 import { styled } from '@mui/material/styles'
 import { Grid, Link } from '@mui/material'
-import { theme } from '../config/theme'
 
 interface Props {
   window?: () => Window
