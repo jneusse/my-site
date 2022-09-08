@@ -20,6 +20,7 @@ interface IHomeProps {}
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
   return (
     <Box
+      id="Home"
       sx={{
         width: '100%',
         backgroundColor: 'transparent',

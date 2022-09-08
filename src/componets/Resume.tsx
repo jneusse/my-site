@@ -33,7 +33,7 @@ interface IResumeProps {}
 
 const Resume: React.FunctionComponent<IResumeProps> = (props) => {
   return (
-    <SectionBox>
+    <SectionBox id="Resume">
       <Container>
         <Grid container direction="row">
           <Grid item xs={12} md={6} px={4} mb={8}>

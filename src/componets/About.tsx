@@ -38,7 +38,7 @@ interface IAboutProps {}
 
 const About: React.FunctionComponent<IAboutProps> = (props) => {
   return (
-    <AboutBox>
+    <AboutBox id="About">
       <Container>
         <Grid
           container
