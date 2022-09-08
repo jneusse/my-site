@@ -1,15 +1,33 @@
-import { Box, Card, Container, Grid, Link, Typography } from '@mui/material'
+import {
+  Box,
+  Container,
+  Grid,
+  LinearProgress,
+  Link,
+  Typography,
+  Stack
+} from '@mui/material'
+import { linearProgressClasses } from '@mui/material/LinearProgress'
 import { styled } from '@mui/material/styles'
-import { Stack } from '@mui/system'
 
 const SectionBox = styled(Box)(
   ({ theme }) => `
     background-color: ${theme.palette.background.default};
     padding: 48px;
-    height: 600px;
     position: relative;
 `
 )
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  //   borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: theme.palette.primary.darker
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    backgroundColor: theme.palette.primary.main
+  }
+}))
 
 interface IResumeProps {}
 
@@ -60,7 +78,7 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
               pattern. Inserted Google Ads. Created API for GraphQL using
               apollo-server.
             </Typography>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2} mb={2}>
               <Grid item xs={4}>
                 <Typography variant="body1" align="left">
                   <Link href="http://culturacolectiva.com">
@@ -79,6 +97,73 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
                 </Typography>
               </Grid>
             </Stack>
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              Promotora Kranon
+            </Typography>
+            <Typography component="h5" variant="h5" align="left">
+              Full Stack Developer | Sep 2019 - Jun 2021
+            </Typography>
+            <Typography component="p" variant="body1" align="left" paragraph>
+              Created styles in SCSS. Layout in css according to the given
+              design. Created features in ReactJS according to the given
+              pattern. Inserted Google Ads. Created API for GraphQL using
+              apollo-server.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6} px={4} mb={8}>
+            <Typography component="h2" variant="h2" align="right" mb={2}>
+              Skills
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6} px={4} mb={8}>
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              HTML5
+            </Typography>
+            <BorderLinearProgress
+              variant="determinate"
+              value={70}
+              sx={{ marginBottom: 2 }}
+            />
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              CSS / SASS
+            </Typography>
+            <BorderLinearProgress
+              variant="determinate"
+              value={60}
+              sx={{ marginBottom: 2 }}
+            />
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              React JS
+            </Typography>
+            <BorderLinearProgress
+              variant="determinate"
+              value={70}
+              sx={{ marginBottom: 2 }}
+            />
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              Node JS
+            </Typography>
+            <BorderLinearProgress
+              variant="determinate"
+              value={70}
+              sx={{ marginBottom: 2 }}
+            />
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              FLUTTER
+            </Typography>
+            <BorderLinearProgress
+              variant="determinate"
+              value={40}
+              sx={{ marginBottom: 2 }}
+            />
+            <Typography component="h4" variant="h4" align="left" mb={2}>
+              GraphQL
+            </Typography>
+            <BorderLinearProgress
+              variant="determinate"
+              value={70}
+              sx={{ marginBottom: 2 }}
+            />
           </Grid>
         </Grid>
       </Container>

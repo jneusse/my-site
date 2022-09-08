@@ -40,12 +40,15 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
             height="100%"
           >
             <Grid item xs={12} md={6}>
-              <Box mx="auto">
+              <Box
+                mx="auto"
+                className="animate__animated animate__backInLeft animate__delay-1s"
+              >
                 <CustomAvatar
                   alt="Jesus Eusse Developer"
                   src="/img/me and github.png"
                   sx={{ width: '600px', height: '600px' }}
-                  className="animate__animated animate__backInLeft animate__delay-1s"
+                  className="animate__animated animate__pulse animate__slow	 animate__infinite"
                 />
               </Box>
             </Grid>

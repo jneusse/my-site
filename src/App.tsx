@@ -6,6 +6,8 @@ import './scss/app.scss'
 import 'animate.css'
 import About from './componets/About'
 import Resume from './componets/Resume'
+import UnderConstruction from './componets/UnderConstruction'
+import { Box } from '@mui/material'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Home />
         <About />
         <Resume />
+        <UnderConstruction />
+        <Box height="100vh"></Box>
       </ThemeProvider>
     </div>
   )

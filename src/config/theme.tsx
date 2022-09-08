@@ -29,9 +29,17 @@ declare module '@mui/material/styles' {
   }
   interface TypographyVariants {
     li: React.CSSProperties
+    poster: React.CSSProperties
   }
   interface TypographyVariantsOptions {
     li?: React.CSSProperties
+    poster?: React.CSSProperties
+  }
+}
+
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    poster: true
   }
 }
 
@@ -42,7 +50,7 @@ export const theme = createTheme({
   palette: {
     primary: {
       main: '#ff9c00',
-      darker: '#c57a01'
+      darker: '#382300'
     },
     secondary: {
       main: '#005656',
@@ -102,6 +110,11 @@ export const theme = createTheme({
     },
     li: {
       fontSize: 16,
+      color: '#ff9c00'
+    },
+    poster: {
+      fontSize: 64,
+      fontWeight: 800,
       color: '#ff9c00'
     }
   }
