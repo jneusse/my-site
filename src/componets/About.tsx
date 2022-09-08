@@ -4,7 +4,7 @@ import { Container } from '@mui/system'
 
 const AboutBox = styled(Box)(
   ({ theme }) => `
-    background-color: ${theme.palette.neutral.main};
+    background-color: ${theme.palette.secondary.main};
     padding: 48px;
     position: relative;
 `
@@ -38,7 +38,7 @@ interface IAboutProps {}
 
 const About: React.FunctionComponent<IAboutProps> = (props) => {
   return (
-    <AboutBox>
+    <AboutBox id="About">
       <Container>
         <Grid
           container
@@ -46,7 +46,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
           spacing={{ xs: 4 }}
           height="100%"
         >
-          <Grid xs={12} md={6}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h2" align="left" mb={2}>
               About me
             </Typography>
@@ -62,6 +62,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
             </CustomTypo>
           </Grid>
           <Grid
+            item
             xs={12}
             md={6}
             container

@@ -8,8 +8,7 @@ import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Fade from '@mui/material/Fade'
 import { styled } from '@mui/material/styles'
-import { Grid } from '@mui/material'
-import { theme } from '../config/theme'
+import { Grid, Link } from '@mui/material'
 
 interface Props {
   window?: () => Window
@@ -99,10 +98,18 @@ const Header = (props: Props) => {
         <Container>
           <Toolbar>
             <Grid container direction="row" justifyContent="center">
-              <CustomButton>Home</CustomButton>
-              <CustomButton>About</CustomButton>
-              <CustomButton>Resume</CustomButton>
-              <CustomButton>Contact</CustomButton>
+              <Link href="#Home">
+                <CustomButton>Home</CustomButton>
+              </Link>
+              <Link href="#About">
+                <CustomButton>About</CustomButton>
+              </Link>
+              <Link href="#Resume">
+                <CustomButton>Resume</CustomButton>
+              </Link>
+              <Link href="#Contact">
+                <CustomButton>Contact</CustomButton>
+              </Link>
             </Grid>
           </Toolbar>
         </Container>
