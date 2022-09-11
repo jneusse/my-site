@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material'
-import { Container, Stack } from '@mui/system'
+import { Container } from '@mui/system'
 import { CustomAvatar } from './widgets/CustomAvatar'
 import { styled } from '@mui/material/styles'
 
@@ -24,34 +24,46 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       sx={{
         width: '100%',
         backgroundColor: 'transparent',
-        padding: '24px 0',
-        height: '600px'
+        height: '100vh'
       }}
     >
       <Box
         sx={{
-          width: '100%',
-          position: 'fixed'
+          height: '100%'
         }}
       >
         <Container>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={{ xs: 2 }}
-            height="100%"
-          >
-            <Grid item xs={12} md={6}>
-              <Box
+          <Grid container direction={{ xs: 'column', sm: 'row' }}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              container
+              direction="column"
+              justifyContent="space-around"
+              alignItems="center"
+              sx={{
+                height: '100vh'
+              }}
+            >
+              <Grid
                 mx="auto"
                 className="animate__animated animate__backInLeft animate__delay-1s"
+                sx={{ position: 'fixed' }}
               >
-                <CustomAvatar
-                  alt="Jesus Eusse Developer"
-                  src="/img/me and github.png"
-                  sx={{ width: '600px', height: '600px' }}
-                  className="animate__animated animate__pulse animate__slow	 animate__infinite"
-                />
-              </Box>
+                <Grid
+                  sx={{
+                    width: '100%'
+                  }}
+                >
+                  <CustomAvatar
+                    alt="Jesus Eusse Developer"
+                    src="/img/me and github.png"
+                    sx={{ width: '600px', height: '600px' }}
+                    className="animate__animated animate__pulse animate__slow	 animate__infinite"
+                  />
+                </Grid>
+              </Grid>
             </Grid>
             <Grid
               item
@@ -59,10 +71,10 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
               md={6}
               container
               direction="column"
-              justifyContent="center"
+              justifyContent="space-around"
               alignItems="center"
             >
-              <Grid item>
+              <Grid item ml={8}>
                 <CustomBox className="animate__animated animate__backInRight animate__delay-1s">
                   <Typography variant="h2" align="left">
                     Hi, I'm Jesus Eusse
@@ -78,7 +90,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                 </CustomBox>
               </Grid>
             </Grid>
-          </Stack>
+          </Grid>
         </Container>
       </Box>
     </Box>

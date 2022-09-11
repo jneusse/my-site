@@ -6,19 +6,23 @@ import './scss/app.scss'
 import 'animate.css'
 import About from './componets/About'
 import Resume from './componets/Resume'
-import UnderConstruction from './componets/UnderConstruction'
+// import UnderConstruction from './componets/UnderConstruction'
 import { Box } from '@mui/material'
+import Contact from './componets/Contact'
 
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <Header />
-        <Home />
-        <About />
-        <Resume />
-        <UnderConstruction />
-        <Box height="100vh"></Box>
+        <body>
+          <Home />
+          <About />
+          <Resume />
+          {/* <UnderConstruction /> */}
+          <Contact />
+          {/* <Box height="100vh"></Box> */}
+        </body>
       </ThemeProvider>
     </div>
   )
