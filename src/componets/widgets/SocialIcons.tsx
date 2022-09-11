@@ -4,6 +4,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import TelegramIcon from '@mui/icons-material/Telegram'
+import GitHubIcon from '@mui/icons-material/GitHub'
 import { theme } from '../../config/theme'
 
 const SocialIcon: Record<string, JSX.Element> = {
@@ -54,6 +55,15 @@ const SocialIcon: Record<string, JSX.Element> = {
   ),
   telegram: (
     <TelegramIcon
+      sx={{
+        fontSize: 64,
+        '&:hover': { color: theme.palette.primary.darker },
+        transition: 'all 150ms ease'
+      }}
+    />
+  ),
+  github: (
+    <GitHubIcon
       sx={{
         fontSize: 64,
         '&:hover': { color: theme.palette.primary.darker },

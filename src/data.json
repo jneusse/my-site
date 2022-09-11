@@ -19,6 +19,10 @@
     {
       "type": "telegram",
       "link": "https://t.me/yisus_developer"
+    },
+    {
+      "type": "github",
+      "link": "https://github.com/jneusse"
     }
   ]
 }
