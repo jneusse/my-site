@@ -7,7 +7,8 @@ import 'animate.css'
 import About from './componets/About'
 import Resume from './componets/Resume'
 import UnderConstruction from './componets/UnderConstruction'
-import { Box } from '@mui/material'
+import Contact from './componets/Contact'
+import data from './data.json'
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         <Home />
         <About />
         <Resume />
+        <Contact socialMedia={data.social_medial} />
         <UnderConstruction />
-        <Box height="100vh"></Box>
       </ThemeProvider>
     </div>
   )

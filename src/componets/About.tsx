@@ -38,57 +38,61 @@ interface IAboutProps {}
 
 const About: React.FunctionComponent<IAboutProps> = (props) => {
   return (
-    <AboutBox id="About">
-      <Container>
-        <Grid
-          container
-          direction={{ xs: 'column', sm: 'row' }}
-          spacing={{ xs: 4 }}
-          height="100%"
-        >
-          <Grid item xs={12} md={6}>
-            <Typography variant="h2" align="left" mb={2}>
-              About me
-            </Typography>
-            <CustomTypo variant="h3" align="left" lang="en-US">
-              Well-qualified Full Stack Developer, familiar with wide range of
-              programming utilities and languages. Knowledgeable of backend and
-              frontend development requirements. Handles any part of process
-              with ease. Collaborative team player with excellent technical
-              abilities, offering 3 years of related experience. Enthusiastic
-              technical professional, with complete understanding of entire
-              software development lifecycle. Highly trained in Backend and
-              Frontend and known for having talents in Javascript and HTML.
-            </CustomTypo>
-          </Grid>
+    <>
+      <Box id="About" height="64px"></Box>
+      <AboutBox>
+        <Container>
           <Grid
-            item
-            xs={12}
-            md={6}
             container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={{ xs: 4 }}
+            height="100%"
           >
-            <SquareBox>
-              <Grid
-                container
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-                height="100%"
-              >
-                <Box>
-                  <Typography id="typo1" variant="h3" align="center">
-                    I also know how to center a div
-                  </Typography>
-                </Box>
-              </Grid>
-            </SquareBox>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h2" align="left" mb={2}>
+                About me
+              </Typography>
+              <CustomTypo variant="h3" align="left" lang="en-US">
+                Well-qualified Full Stack Developer, familiar with wide range of
+                programming utilities and languages. Knowledgeable of backend
+                and frontend development requirements. Handles any part of
+                process with ease. Collaborative team player with excellent
+                technical abilities, offering 3 years of related experience.
+                Enthusiastic technical professional, with complete understanding
+                of entire software development lifecycle. Highly trained in
+                Backend and Frontend and known for having talents in Javascript
+                and HTML.
+              </CustomTypo>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <SquareBox>
+                <Grid
+                  container
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  height="100%"
+                >
+                  <Box>
+                    <Typography id="typo1" variant="h3" align="center">
+                      I also know how to center a div
+                    </Typography>
+                  </Box>
+                </Grid>
+              </SquareBox>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </AboutBox>
+        </Container>
+      </AboutBox>
+    </>
   )
 }
 

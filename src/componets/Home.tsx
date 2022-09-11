@@ -1,5 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material'
-import { Container, Stack } from '@mui/system'
+import { Box, Grid, Typography, Container } from '@mui/material'
 import { CustomAvatar } from './widgets/CustomAvatar'
 import { styled } from '@mui/material/styles'
 
@@ -15,6 +14,14 @@ const CustomBox = styled(Box)(
 `
 )
 
+const CustomGrid = styled(Grid)(({ theme }) => ({
+  minHeight: '100vh',
+  [theme.breakpoints.down('md')]: {
+    minHeight: '60vh',
+    marginBottom: 40
+  }
+}))
+
 interface IHomeProps {}
 
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
@@ -24,51 +31,71 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       sx={{
         width: '100%',
         backgroundColor: 'transparent',
-        padding: '24px 0',
-        height: '600px'
+        minHeight: '100vh'
       }}
     >
       <Box
         sx={{
-          width: '100%',
-          position: 'fixed'
+          height: '100%'
         }}
       >
         <Container>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={{ xs: 2 }}
-            height="100%"
-          >
-            <Grid item xs={12} md={6}>
-              <Box
-                mx="auto"
+          <Grid container direction={{ xs: 'column', sm: 'row' }}>
+            <CustomGrid
+              item
+              xs={12}
+              md={6}
+              container
+              direction="column"
+              justifyContent="space-around"
+              alignItems="center"
+              // sx={{
+              //   minHeight: '100vh'
+              // }}
+            >
+              <Grid
+                // mx="auto"
                 className="animate__animated animate__backInLeft animate__delay-1s"
+                sx={{ position: 'fixed' }}
               >
-                <CustomAvatar
-                  alt="Jesus Eusse Developer"
-                  src="/img/me and github.png"
-                  sx={{ width: '600px', height: '600px' }}
-                  className="animate__animated animate__pulse animate__slow	 animate__infinite"
-                />
-              </Box>
-            </Grid>
+                <Grid
+                  sx={{
+                    width: '100%'
+                  }}
+                >
+                  <CustomAvatar
+                    alt="Jesus Eusse Developer"
+                    src="/img/me and github.png"
+                    sx={{ width: '50vh', height: '50vh' }}
+                    className="animate__animated animate__pulse animate__slow	 animate__infinite"
+                  />
+                </Grid>
+              </Grid>
+            </CustomGrid>
             <Grid
               item
               xs={12}
               md={6}
               container
               direction="column"
-              justifyContent="center"
+              justifyContent="space-around"
               alignItems="center"
             >
               <Grid item>
                 <CustomBox className="animate__animated animate__backInRight animate__delay-1s">
-                  <Typography variant="h2" align="left">
+                  <Typography
+                    variant="h2"
+                    align="left"
+                    className="text-shadow-black"
+                  >
                     Hi, I'm Jesus Eusse
                   </Typography>
                   <Grid>
-                    <Typography variant="h3" align="left">
+                    <Typography
+                      variant="h3"
+                      align="left"
+                      className="text-shadow-black"
+                    >
                       I am a Full Stack Developer. Well-qualified Full Stack
                       Developer, familiar with wide range of programming
                       utilities and languages. Knowledgeable of backend and
@@ -78,7 +105,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                 </CustomBox>
               </Grid>
             </Grid>
-          </Stack>
+          </Grid>
         </Container>
       </Box>
     </Box>

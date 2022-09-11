@@ -9,7 +9,7 @@ const CustomBox = styled(Box)(
       background-color: ${theme.palette.secondary.main};
       padding: 48px;
       position: relative;
-      height: 600px
+      height: 100vh
   `
 )
 
@@ -29,7 +29,11 @@ const UnderConstruction: React.FunctionComponent<IUnderConstructionProps> = (
           height="100%"
         >
           <Box>
-            <Typography variant="poster" align="center">
+            <Typography
+              variant="poster"
+              align="center"
+              fontSize={{ md: 64, sm: 48 }}
+            >
               WEBSITE UNDER CONSTRUCTION
             </Typography>
           </Box>
