@@ -15,6 +15,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   ),
   linkedin: (
@@ -24,6 +25,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   ),
   twitter: (
@@ -33,6 +35,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   ),
   youtube: (
@@ -42,6 +45,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   ),
   whatsapp: (
@@ -51,6 +55,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   ),
   telegram: (
@@ -60,6 +65,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   ),
   github: (
@@ -69,6 +75,7 @@ const SocialIcon: Record<string, JSX.Element> = {
         '&:hover': { color: theme.palette.primary.darker },
         transition: 'all 150ms ease'
       }}
+      className="social-icon"
     />
   )
 }

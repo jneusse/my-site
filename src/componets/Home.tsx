@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material'
-import { Container } from '@mui/system'
+import { Container, height } from '@mui/system'
 import { CustomAvatar } from './widgets/CustomAvatar'
 import { styled } from '@mui/material/styles'
 
@@ -15,6 +15,14 @@ const CustomBox = styled(Box)(
 `
 )
 
+const CustomGrid = styled(Grid)(({ theme }) => ({
+  minHeight: '100vh',
+  [theme.breakpoints.down('md')]: {
+    minHeight: '60vh',
+    marginBottom: 40
+  }
+}))
+
 interface IHomeProps {}
 
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
@@ -24,7 +32,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       sx={{
         width: '100%',
         backgroundColor: 'transparent',
-        height: '100vh'
+        minHeight: '100vh'
       }}
     >
       <Box
@@ -34,7 +42,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       >
         <Container>
           <Grid container direction={{ xs: 'column', sm: 'row' }}>
-            <Grid
+            <CustomGrid
               item
               xs={12}
               md={6}
@@ -42,12 +50,12 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
               direction="column"
               justifyContent="space-around"
               alignItems="center"
-              sx={{
-                height: '100vh'
-              }}
+              // sx={{
+              //   minHeight: '100vh'
+              // }}
             >
               <Grid
-                mx="auto"
+                // mx="auto"
                 className="animate__animated animate__backInLeft animate__delay-1s"
                 sx={{ position: 'fixed' }}
               >
@@ -59,12 +67,12 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                   <CustomAvatar
                     alt="Jesus Eusse Developer"
                     src="/img/me and github.png"
-                    sx={{ width: '600px', height: '600px' }}
+                    sx={{ width: '50vh', height: '50vh' }}
                     className="animate__animated animate__pulse animate__slow	 animate__infinite"
                   />
                 </Grid>
               </Grid>
-            </Grid>
+            </CustomGrid>
             <Grid
               item
               xs={12}
@@ -74,13 +82,21 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
               justifyContent="space-around"
               alignItems="center"
             >
-              <Grid item ml={8}>
+              <Grid item>
                 <CustomBox className="animate__animated animate__backInRight animate__delay-1s">
-                  <Typography variant="h2" align="left">
+                  <Typography
+                    variant="h2"
+                    align="left"
+                    className="text-shadow-black"
+                  >
                     Hi, I'm Jesus Eusse
                   </Typography>
                   <Grid>
-                    <Typography variant="h3" align="left">
+                    <Typography
+                      variant="h3"
+                      align="left"
+                      className="text-shadow-black"
+                    >
                       I am a Full Stack Developer. Well-qualified Full Stack
                       Developer, familiar with wide range of programming
                       utilities and languages. Knowledgeable of backend and

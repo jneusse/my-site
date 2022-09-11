@@ -14,14 +14,12 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <body>
-          <Header />
-          <Home />
-          <About />
-          <Resume />
-          <Contact socialMedia={data.social_medial} />
-          <UnderConstruction />
-        </body>
+        <Header />
+        <Home />
+        <About />
+        <Resume />
+        <Contact socialMedia={data.social_medial} />
+        <UnderConstruction />
       </ThemeProvider>
     </div>
   )

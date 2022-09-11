@@ -13,7 +13,16 @@ import SocialIcon from './widgets/SocialIcons'
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
   textAlign: 'center',
-  color: theme.palette.primary.main
+  color: theme.palette.primary.main,
+  boxShadow: 'none'
+}))
+
+const CustomBox = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(1),
+  [theme.breakpoints.down('md')]: {
+    position: 'relative',
+    marginLeft: 0
+  }
 }))
 
 interface IContactProps {
@@ -53,15 +62,17 @@ const Contact: React.FunctionComponent<IContactProps> = ({ socialMedia }) => {
               container
               direction="column"
               justifyContent="space-around"
+              mt={{ md: '0', xs: '100%' }}
               alignItems="center"
             >
-              <Grid item ml={8}>
-                <Box>
+              <Grid item>
+                <CustomBox>
                   <Typography
                     variant="h2"
                     align="left"
                     mb={2}
                     textAlign="center"
+                    className="text-shadow-black"
                   >
                     Take a look on my social media!
                   </Typography>
@@ -85,7 +96,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ socialMedia }) => {
                           )
                       )}
                   </Grid>
-                </Box>
+                </CustomBox>
               </Grid>
             </Grid>
           </Grid>

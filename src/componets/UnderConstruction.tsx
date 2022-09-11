@@ -29,7 +29,11 @@ const UnderConstruction: React.FunctionComponent<IUnderConstructionProps> = (
           height="100%"
         >
           <Box>
-            <Typography variant="poster" align="center">
+            <Typography
+              variant="poster"
+              align="center"
+              fontSize={{ md: 64, sm: 48 }}
+            >
               WEBSITE UNDER CONSTRUCTION
             </Typography>
           </Box>

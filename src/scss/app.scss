@@ -49,3 +49,29 @@ body {
 }
 
 // utilities
+.text-shadow-black {
+  text-shadow: #000000 -2px 2px 5px;
+}
+.box-shadow-black {
+  box-shadow: #ffffff -2px 2px 5px;
+}
+.social-icon {
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 33%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 33%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 33%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
