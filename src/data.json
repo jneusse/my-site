@@ -1,0 +1,24 @@
+{
+  "social_medial": [
+    {
+      "type": "instagram",
+      "link": "http://www.instagram.com/yisusdev"
+    },
+    {
+      "type": "twitter",
+      "link": "https://twitter.com/yisus_developer"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/jesuseusse/"
+    },
+    {
+      "type": "youtube",
+      "link": "https://www.youtube.com/channel/UCvGoiOncb9OSfE57csiw3dQ"
+    },
+    {
+      "type": "telegram",
+      "link": "https://t.me/yisus_developer"
+    }
+  ]
+}

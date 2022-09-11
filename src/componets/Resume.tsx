@@ -18,6 +18,14 @@ const SectionBox = styled(Box)(
 `
 )
 
+const BoxId = styled(Box)(
+  ({ theme }) => `
+    background-color: ${theme.palette.background.default};
+    height: 64px;
+    width: 100%;
+`
+)
+
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   //   borderRadius: 5,
@@ -33,7 +41,8 @@ interface IResumeProps {}
 
 const Resume: React.FunctionComponent<IResumeProps> = (props) => {
   return (
-    <SectionBox id="Resume">
+    <SectionBox>
+      <BoxId id="Resume" />
       <Container>
         <Grid container direction="row">
           <Grid item xs={12} md={6} px={4} mb={8}>

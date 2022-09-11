@@ -6,22 +6,21 @@ import './scss/app.scss'
 import 'animate.css'
 import About from './componets/About'
 import Resume from './componets/Resume'
-// import UnderConstruction from './componets/UnderConstruction'
-import { Box } from '@mui/material'
+import UnderConstruction from './componets/UnderConstruction'
 import Contact from './componets/Contact'
+import data from './data.json'
 
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Header />
         <body>
+          <Header />
           <Home />
           <About />
           <Resume />
-          {/* <UnderConstruction /> */}
-          <Contact />
-          {/* <Box height="100vh"></Box> */}
+          <Contact socialMedia={data.social_medial} />
+          <UnderConstruction />
         </body>
       </ThemeProvider>
     </div>

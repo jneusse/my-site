@@ -9,7 +9,7 @@ const CustomBox = styled(Box)(
       background-color: ${theme.palette.secondary.main};
       padding: 48px;
       position: relative;
-      height: 600px
+      height: 100vh
   `
 )
 

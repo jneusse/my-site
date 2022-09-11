@@ -1,9 +1,14 @@
-import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
+import {
+  Box,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  IconButton,
+  Link
+} from '@mui/material'
 import { styled } from '@mui/material/styles'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import { LinkedIn } from '@mui/icons-material'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import YouTubeIcon from '@mui/icons-material/YouTube'
+import SocialIcon from './widgets/SocialIcons'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
@@ -11,9 +16,11 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.primary.main
 }))
 
-interface IContactProps {}
+interface IContactProps {
+  socialMedia: Array<Record<string, string>>
+}
 
-const Contact: React.FunctionComponent<IContactProps> = (props) => {
+const Contact: React.FunctionComponent<IContactProps> = ({ socialMedia }) => {
   return (
     <Box
       id="Contact"
@@ -21,7 +28,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
         width: '100%',
         backgroundColor: 'transparent',
         padding: '24px 0',
-        height: '600px'
+        height: '100vh'
       }}
     >
       <Box
@@ -58,20 +65,26 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
                   >
                     Take a look on my social media!
                   </Typography>
-                  <Stack direction="row" spacing={2} justifyContent="center">
-                    <Item>
-                      <InstagramIcon sx={{ fontSize: 64 }} />
-                    </Item>
-                    <Item>
-                      <LinkedIn sx={{ fontSize: 64 }} />
-                    </Item>
-                    <Item>
-                      <TwitterIcon sx={{ fontSize: 64 }} />
-                    </Item>
-                    <Item>
-                      <YouTubeIcon sx={{ fontSize: 64 }} />
-                    </Item>
-                  </Stack>
+                  <Grid container justifyContent="center">
+                    {socialMedia.length &&
+                      socialMedia.map(
+                        (item) =>
+                          SocialIcon[item.type] && (
+                            <Item key={item.link}>
+                              <IconButton
+                                color="primary"
+                                sx={{
+                                  '&hover': { 'box-shadow': '5px 10px #888888' }
+                                }}
+                              >
+                                <Link href={item.link} target="_blank">
+                                  {SocialIcon[item.type]}
+                                </Link>
+                              </IconButton>
+                            </Item>
+                          )
+                      )}
+                  </Grid>
                 </Box>
               </Grid>
             </Grid>
