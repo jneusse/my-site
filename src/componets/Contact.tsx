@@ -48,7 +48,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ socialMedia }) => {
         <Container>
           <Grid
             container
-            direction={{ xs: 'column', sm: 'row' }}
+            direction="row"
             spacing={{ xs: 2 }}
             height="100vh"
             width="100%"
@@ -85,7 +85,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ socialMedia }) => {
                               <IconButton
                                 color="primary"
                                 sx={{
-                                  '&hover': { 'box-shadow': '5px 10px #888888' }
+                                  '&hover': { boxShadow: '5px 10px #888888' }
                                 }}
                               >
                                 <Link href={item.link} target="_blank">

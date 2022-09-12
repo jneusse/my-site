@@ -5,27 +5,25 @@ import { Container } from '@mui/system'
 const AboutBox = styled(Box)(
   ({ theme }) => `
     background-color: ${theme.palette.secondary.main};
-    padding: 48px;
     position: relative;
 `
 )
 
-const SquareBox = styled(Box)(
-  ({ theme }) => `
-    background-color: transparent;
-    height:250px;
-    width: 250px;
-    padding: 24px;
-    border: 16px solid ${theme.palette.primary.main};
-    transition: all 0.2s ease-in;
-    &:hover {
-        border: 8px solid ${theme.palette.primary.main};
-    }
-    &:hover #typo1 {
-        font-size: 26px;
-    }
-  `
-)
+const SquareBox = styled(Box)(({ theme }) => ({
+  backgroundColor: 'transparent',
+  boxSizing: 'border-box',
+  aspectRatio: '1 / 1',
+  width: '80%',
+  padding: '24px',
+  border: `16px solid ${theme.palette.primary.main}`,
+  transition: `all 0.2s ease-in`,
+  '&:hover': {
+    border: `8px solid ${theme.palette.primary.main}`
+  },
+  '&:hover #typo1': {
+    fontSize: '26px'
+  }
+}))
 
 const CustomTypo = styled(Typography)(
   ({ theme }) => `
@@ -40,15 +38,10 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
   return (
     <>
       <Box id="About" height="64px"></Box>
-      <AboutBox>
+      <AboutBox py={4}>
         <Container>
-          <Grid
-            container
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={{ xs: 4 }}
-            height="100%"
-          >
-            <Grid item xs={12} md={6}>
+          <Grid container direction="row" height="100%">
+            <Grid item xs={12} md={6} p={0} mb={{ xs: 4, lg: 0 }}>
               <Typography variant="h2" align="left" mb={2}>
                 About me
               </Typography>

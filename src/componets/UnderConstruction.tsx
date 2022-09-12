@@ -32,7 +32,7 @@ const UnderConstruction: React.FunctionComponent<IUnderConstructionProps> = (
             <Typography
               variant="poster"
               align="center"
-              fontSize={{ md: 64, sm: 48 }}
+              fontSize={{ md: 64, sm: 48, xs: 24 }}
             >
               WEBSITE UNDER CONSTRUCTION
             </Typography>
