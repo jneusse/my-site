@@ -13,7 +13,6 @@ import { styled } from '@mui/material/styles'
 const SectionBox = styled(Box)(
   ({ theme }) => `
     background-color: ${theme.palette.background.default};
-    padding: 48px;
     position: relative;
 `
 )
@@ -28,7 +27,6 @@ const BoxId = styled(Box)(
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
-  //   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor: theme.palette.primary.darker
   },
@@ -45,23 +43,23 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
       <BoxId id="Resume" />
       <Container>
         <Grid container direction="row">
-          <Grid item xs={12} md={6} px={4} mb={8}>
-            <Typography component="h2" variant="h2" align="right" mb={2}>
+          <Grid item xs={12} md={6} textAlign={{ xs: 'left', md: 'right' }}>
+            <Typography component="h2" variant="h2" mb={2}>
               Education
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} px={4} mb={8}>
+          <Grid item xs={12} md={6} pl={{ md: 4, xs: 2 }} mb={8}>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Universidad Alejandro de Humboldt
             </Typography>
             <Typography align="left">Computer Engineer - Nov 2018</Typography>
           </Grid>
-          <Grid item xs={12} md={6} px={4} mb={8}>
-            <Typography component="h2" variant="h2" align="right" mb={2}>
+          <Grid item xs={12} md={6} textAlign={{ xs: 'left', md: 'right' }}>
+            <Typography component="h2" variant="h2" mb={2}>
               Work
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} px={4} mb={8}>
+          <Grid item xs={12} md={6} pl={{ md: 4, xs: 2 }} mb={8}>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Z-Tech
             </Typography>
@@ -119,12 +117,12 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
               apollo-server.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} px={4} mb={8}>
-            <Typography component="h2" variant="h2" align="right" mb={2}>
+          <Grid item xs={12} md={6} textAlign={{ xs: 'left', md: 'right' }}>
+            <Typography component="h2" variant="h2" mb={2}>
               Skills
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} px={4} mb={8}>
+          <Grid item xs={12} md={6} pl={{ md: 4, xs: 2 }} mb={8}>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               HTML5
             </Typography>

@@ -50,7 +50,7 @@ function ScrollTop(props: Props) {
 
 const CustomAppBar = styled(AppBar)(
   ({ theme }) => `
-  box-shadow: none;
+  boxShadow: none;
   background-color: ${theme.palette.background.default};
 `
 )
@@ -68,12 +68,12 @@ const CustomButton = styled(ButtonUnstyled)(
     transition: all 150ms ease;
     cursor: pointer;
     border: none;
-    box-shadow: none;
+    boxShadow: none;
     text-transform: uppercase;
   
     &:hover {
       border-bottom:  4px solid;
-      border-color: ${theme.palette.primary.main};
+      borderColor: ${theme.palette.primary.main};
     }
   
     &.${buttonUnstyledClasses.active} {
