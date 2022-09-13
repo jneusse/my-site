@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { Container } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import * as React from 'react'
