@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from './config/theme'
 import Home from './componets/Home'
@@ -32,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeRoute />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="*" element={<HomeRoute />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </ThemeProvider>
     </div>
