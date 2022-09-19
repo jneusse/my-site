@@ -111,10 +111,11 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
               Full Stack Developer | Sep 2019 - Jun 2021
             </Typography>
             <Typography component="p" variant="body1" align="left" paragraph>
-              Created styles in SCSS. Layout in css according to the given
-              design. Created features in ReactJS according to the given
-              pattern. Inserted Google Ads. Created API for GraphQL using
-              apollo-server.
+              Provided front-end website development using Laravel. Planned
+              website development, converting mockups into usable web presence
+              with HTML, JavaScript, AJAX and JSON coding. Developed web sites
+              using libraries like Jquery and Bootstrap. Created controllers,
+              models, middlewares and views using Laravel for web sites.
             </Typography>
           </Grid>
           <Grid item xs={12} md={6} textAlign={{ xs: 'left', md: 'right' }}>
