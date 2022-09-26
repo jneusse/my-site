@@ -107,6 +107,9 @@ const Header = (props: Props) => {
               <Link href="#Resume">
                 <CustomButton>Resume</CustomButton>
               </Link>
+              <Link href="#Demos">
+                <CustomButton>Demos</CustomButton>
+              </Link>
               <Link href="#Contact">
                 <CustomButton>Contact</CustomButton>
               </Link>

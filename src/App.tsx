@@ -11,6 +11,7 @@ import UnderConstruction from './componets/UnderConstruction'
 import Contact from './componets/Contact'
 import data from './data.json'
 import PrivacyPolicy from './componets/PrivacyPolicy'
+import Demos from './componets/Demos'
 
 const HomeRoute = () => {
   return (
@@ -20,6 +21,7 @@ const HomeRoute = () => {
       <About />
       <Resume />
       <Contact socialMedia={data.social_medial} />
+      <Demos />
       <UnderConstruction />
     </>
   )
