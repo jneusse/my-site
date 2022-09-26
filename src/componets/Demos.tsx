@@ -45,8 +45,11 @@ const Demos = () => {
                       The movies App
                     </Typography>
                     <Typography variant="body2">
-                      This is just a little demo developed with flutter and
-                      available in Play Store for free.
+                      This is just a little demo developed with{' '}
+                      <Link href="https://flutter.dev/" target="_blank">
+                        flutter
+                      </Link>{' '}
+                      and available in Play Store for free.
                     </Typography>
                   </CardContent>
                   <CardActions sx={{ justifyContent: 'center' }}>
