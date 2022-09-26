@@ -32,7 +32,7 @@ const Demos = () => {
           <Grid item>
             <Grid container flexDirection="row" justifyContent="center" py={8}>
               <Grid item>
-                <Card sx={{ width: '400px' }}>
+                <Card sx={{ maxWidth: '300px' }}>
                   <CardMedia
                     component="img"
                     height="300px"
