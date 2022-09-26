@@ -73,7 +73,8 @@ export const theme = createTheme({
     },
     divider: 'rgba(255,90,0,0.12)',
     background: {
-      default: '#000000'
+      default: '#000000',
+      paper: '#000000'
     },
     neutral: {
       main: '#292929',
@@ -86,6 +87,9 @@ export const theme = createTheme({
   typography: {
     fontSize: 12,
     body1: {
+      color: '#FFFFFF'
+    },
+    body2: {
       color: '#FFFFFF'
     },
     fontFamily: '"Encode Sans Expanded", "Helvetica", "Arial", sans-serif',
