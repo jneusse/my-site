@@ -108,8 +108,7 @@ export const theme = createTheme({
     h5: {
       fontSize: 16,
       color: '#ff9c00',
-      fontWeight: 800,
-      fontFamily: 'Helvetica'
+      fontWeight: 800
     },
     li: {
       fontSize: 16,

@@ -1,5 +1,187 @@
 {
-  "social_medial": [
+  "introduction": "Full Stack Developer with +3 years of experience stack MERN. I have participated developing software for international  company such as DHL, Coca-cola and AB-inBev. Either improving user experience and solving bugs on production. I'm passionate about creating new software and participating by contributing my ideas to solve needs. ",
+  "experience": [
+    {
+      "companyName": "Z-tech",
+      "fromDate": "April, 2022",
+      "toDate": "Currently",
+      "position": "Full Stack Developer",
+      "description": [
+        "Improved user experience in Admin Portal, giving easy access to reports and download assets",
+        "Configured an easy way to use feature flags in order to avoid multiples releases to production",
+        "Detected hundreds of warnings and deprecated dependencies and solved them. Improving performance"
+      ]
+    },
+    {
+      "companyName": "Underdog",
+      "fromDate": "June, 2021",
+      "toDate": "April, 2022",
+      "projects": [
+        {
+          "position": "Full Stack Developer",
+          "projectName": "E-commerce FEMSA",
+          "fromDate": "June, 2021",
+          "toDate": "November, 2022",
+          "description": [
+            "Created types def to improve behavior of Graph-ql, making easily readable code",
+            "Created feature to show temporal discounts, improving user accessibility to these offers"
+          ],
+          "techStack": "MERN (Typescript)"
+        },
+        {
+          "position": "Code Leader Project",
+          "projectName": "culturacolectiva.com",
+          "fromDate": "November, 2021",
+          "toDate": "April, 2022",
+          "description": [
+            "Identified weaknesses and strengths of all members of the team giving tasks according their experience what made the project move forward faster",
+            "Created the temple code to start the project",
+            "Optimized releases by using GitHub actions",
+            "Coded Sass and created classes to easily design according the given design"
+          ],
+          "techStack": "React, Sass and ARCXP",
+          "links": [
+            "https://culturacolectiva.com",
+            "https://ecoosfera.com",
+            "https://elfildeo.com"
+          ]
+        }
+      ]
+    },
+    {
+      "companyName": "Promotora Kranon",
+      "fromDate": "September, 2019",
+      "toDate": "June, 2021",
+      "projects": [
+        {
+          "position": "Full Stack Developer",
+          "projectName": "UNITEC Dashboard ",
+          "fromDate": "September, 2019",
+          "toDate": "December, 2019",
+          "description": [
+            "Created login and full management users to access reports ",
+            "Designed full interface intuitive and easily to use",
+            "Consumed external API to deliver downloadable reports and charts"
+          ],
+          "techStack": "Laravel, SQL server, JavaScript. "
+        },
+        {
+          "position": "Back-end Developer",
+          "projectName": "Amerant Bank",
+          "fromDate": "January, 2020",
+          "toDate": "November, 2021",
+          "description": [
+            "Coded IVR by using Convergys what made thousands of client had a better experience within call center",
+            "Created middleware to communicate IVR with Bank's API reducing security risk"
+          ],
+          "techStack": "JavaScript, Convergys, Java"
+        },
+        {
+          "position": "Full Stack Developer",
+          "projectName": "KIO ChatBot",
+          "fromDate": "January, 2020",
+          "toDate": "October, 2021",
+          "description": [
+            "Coded widget to open a chatbot for communication between clients and providers, reducing response time and calls to the call center"
+          ],
+          "techStack": "React, NodeJs, Dialogflow"
+        },
+        {
+          "position": "Back-end Developer",
+          "projectName": "DHL ChatBot",
+          "fromDate": "November, 2021",
+          "toDate": "June, 2022",
+          "description": [
+            "Coded webhook to interact with Whatsapp chat-bot and Database, what made delivers communicate easily with distribution center"
+          ],
+          "techStack": "NodeJs, Dialogflow"
+        },
+        {
+          "position": "Front-end Developer",
+          "projectName": "Murphy Call Center Admin",
+          "fromDate": "January, 2021",
+          "toDate": "June, 2022",
+          "description": [
+            "Designed a web interface to attend calls and chats what allows the agents to keep different conversations at the same time"
+          ],
+          "techStack": "VueJS"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "name": "Universidad Alejandro de Humboldt",
+      "year": "2018",
+      "location": "Caracas, Venezuela",
+      "title": "Computer Engineering"
+    }
+  ],
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "porcent": 90
+      },
+      {
+        "name": "Typescript",
+        "porcent": 70
+      },
+      {
+        "name": "PHP",
+        "porcent": 60
+      },
+      {
+        "name": "Dart",
+        "porcent": 30
+      },
+      {
+        "name": "Java",
+        "porcent": 30
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "React JS",
+        "porcent": 90
+      },
+      {
+        "name": "Bootstrap",
+        "porcent": 90
+      },
+      {
+        "name": "Vue JS",
+        "porcent": 60
+      },
+      {
+        "name": "Laravel",
+        "porcent": 50
+      },
+      {
+        "name": "Flutter",
+        "porcent": 40
+      },
+      {
+        "name": "React Native",
+        "porcent": 20
+      }
+    ],
+    "database": [
+      { "name": "MySQL", "porcent": 90 },
+      { "name": "MongoDB", "porcent": 70 },
+      { "name": "SQL Server", "porcent": 70 },
+      { "name": "CouchDB", "porcent": 70 },
+      { "name": "PostgreSQL", "porcent": 20 }
+    ],
+    "tools": ["Sass", "Dockers", "Firebase", "GitHub"],
+    "languages": {
+      "basic": [],
+      "intermediate": [],
+      "avanced": ["English"],
+      "native": ["Spanish"]
+    }
+  },
+  "socialMedia": [
     {
       "type": "instagram",
       "link": "http://www.instagram.com/yisusdev"

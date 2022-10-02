@@ -35,9 +35,73 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   }
 }))
 
-interface IResumeProps {}
+type LanguagesValuesType = {
+  basic?: string[]
+  intermediate?: string[]
+  avanced?: string[]
+  native: string[]
+}
 
-const Resume: React.FunctionComponent<IResumeProps> = (props) => {
+type SkillValueType = {
+  name: string
+  porcent: number
+}
+
+type SkillsType = {
+  programmingLanguages: SkillValueType[]
+  frameworks: SkillValueType[]
+  database: SkillValueType[]
+  tools: string[]
+  languages: LanguagesValuesType
+}
+
+type EducationType = {
+  name: string
+  year: string
+  location: string
+  title: string
+}
+
+type ProjectType = {
+  position: string
+  projectName: string
+  fromDate?: string
+  toDate?: string
+  description: string[]
+  techStack?: string
+  links?: string[]
+}
+
+type ExperienceType = {
+  companyName: string
+  fromDate?: string
+  toDate?: string
+  position?: string
+  description?: string[]
+  projects?: ProjectType[]
+}
+interface IResumeProps {
+  experience: ExperienceType[]
+  education: EducationType[]
+  skills: SkillsType
+}
+
+const level = (value: number) => {
+  if (value <= 30) return 'Basic'
+  if (value <= 60) return 'Intermediate'
+  if (value >= 60) return 'Advanced'
+}
+
+const Resume: React.FunctionComponent<IResumeProps> = ({
+  experience,
+  education,
+  skills
+}) => {
+  const programmingLanguages = skills.programmingLanguages.sort(
+    (a, b) => b.porcent - a.porcent
+  )
+  const frameworks = skills.frameworks.sort((a, b) => b.porcent - a.porcent)
+  const database = skills.database.sort((a, b) => b.porcent - a.porcent)
   return (
     <SectionBox>
       <BoxId id="Resume" />
@@ -48,75 +112,104 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
               Education
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} pl={{ md: 4, xs: 2 }} mb={8}>
-            <Typography component="h4" variant="h4" align="left" mb={2}>
-              Universidad Alejandro de Humboldt
-            </Typography>
-            <Typography align="left">Computer Engineer - Nov 2018</Typography>
-          </Grid>
+          {education &&
+            education.map((item, index) => (
+              <Grid
+                item
+                xs={12}
+                md={6}
+                pl={{ md: 4, xs: 2 }}
+                mb={8}
+                key={index}
+              >
+                <Typography component="h4" variant="h4" align="left" mb={2}>
+                  {item.name}
+                </Typography>
+                <Typography align="left">
+                  {item.location}, {item.title}, {item.year}
+                </Typography>
+              </Grid>
+            ))}
           <Grid item xs={12} md={6} textAlign={{ xs: 'left', md: 'right' }}>
             <Typography component="h2" variant="h2" mb={2}>
               Work
             </Typography>
           </Grid>
           <Grid item xs={12} md={6} pl={{ md: 4, xs: 2 }} mb={8}>
-            <Typography component="h4" variant="h4" align="left" mb={2}>
-              Z-Tech
-            </Typography>
-            <Typography component="h5" variant="h5" align="left">
-              Full Stack Developer | Abr 2022 - Currently
-            </Typography>
-            <Typography component="p" variant="body1" align="left" paragraph>
-              Coded web-apps using REACT. Created components to improve user
-              experience. Implemented hooks from custom libraries Created end
-              points in NodeJS according frontend requirements. Reviewed code to
-              implement good practices and readable code/ Planned sprint and
-              stories
-            </Typography>
-            <Typography component="h4" variant="h4" align="left" mb={2}>
-              Underdog
-            </Typography>
-            <Typography component="h5" variant="h5" align="left">
-              Full Stack Developer | Jun 2021 - Apr 2022
-            </Typography>
-            <Typography component="p" variant="body1" align="left" paragraph>
-              Created styles in SCSS. Layout in css according to the given
-              design. Created features in ReactJS according to the given
-              pattern. Inserted Google Ads. Created API for GraphQL using
-              apollo-server.
-            </Typography>
-            <Stack direction="row" spacing={2} mb={2}>
-              <Grid item xs={4}>
-                <Typography variant="body1" align="left">
-                  <Link href="http://culturacolectiva.com">
-                    culturacolectiva.com
-                  </Link>
+            {experience.map((item, index) => (
+              <Box key={index}>
+                <Typography component="h4" variant="h4" align="left" mb={2}>
+                  {item.companyName}
                 </Typography>
-              </Grid>
-              <Grid item xs={4}>
-                <Typography variant="body1" align="left">
-                  <Link href="http://culturacolectiva.com">ecoosfera.com</Link>
-                </Typography>
-              </Grid>
-              <Grid item xs={4}>
-                <Typography variant="body1" align="left">
-                  <Link href="http://culturacolectiva.com">elfildeo.com</Link>
-                </Typography>
-              </Grid>
-            </Stack>
-            <Typography component="h4" variant="h4" align="left" mb={2}>
-              Promotora Kranon
-            </Typography>
-            <Typography component="h5" variant="h5" align="left">
-              Full Stack Developer | Sep 2019 - Jun 2021
-            </Typography>
-            <Typography component="p" variant="body1" align="left" paragraph>
-              Provided front-end website development using Laravel. Planned
-              website development, converting mockups into usable web presence
-              with HTML, JavaScript, AJAX and JSON coding. Developed web sites
-              using libraries like Jquery and Bootstrap. Created controllers,
-              models, middlewares and views using Laravel for web sites.
-            </Typography>
+                {item.position && item.fromDate && (
+                  <Typography component="h5" variant="h5" align="left">
+                    {item.position} | {item.fromDate} - {item.toDate}
+                  </Typography>
+                )}
+                {item.description && (
+                  <ul>
+                    {item.description.map((item, index) => (
+                      <li key={index} className="item_description">
+                        <Typography
+                          component="p"
+                          variant="body1"
+                          align="left"
+                          paragraph
+                        >
+                          {item}
+                        </Typography>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {item.projects && (
+                  <Typography component="h5" variant="h5" align="left">
+                    Projects
+                  </Typography>
+                )}
+                {item.projects && (
+                  <ul>
+                    {item.projects.map((itemProject, index) => (
+                      <li key={index} className="item_description">
+                        <Typography
+                          component="p"
+                          variant="body1"
+                          align="left"
+                          paragraph
+                        >
+                          {itemProject.position}, {itemProject.projectName},{' '}
+                          {itemProject.fromDate} - {itemProject.toDate}
+                        </Typography>
+                        <ul>
+                          {itemProject.description.map((itemDesc, i) => (
+                            <li className="item_description" key={i}>
+                              <Typography
+                                component="p"
+                                variant="body1"
+                                align="left"
+                                paragraph
+                              >
+                                {itemDesc}
+                              </Typography>
+                            </li>
+                          ))}
+                        </ul>
+                        {itemProject.techStack && (
+                          <Typography
+                            component="p"
+                            variant="body1"
+                            align="left"
+                            paragraph
+                          >
+                            Tech Stack: {itemProject.techStack}
+                          </Typography>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </Box>
+            ))}
           </Grid>
           <Grid item xs={12} md={6} textAlign={{ xs: 'left', md: 'right' }}>
             <Typography component="h2" variant="h2" mb={2}>
@@ -125,53 +218,106 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
           </Grid>
           <Grid item xs={12} md={6} pl={{ md: 4, xs: 2 }} mb={8}>
             <Typography component="h4" variant="h4" align="left" mb={2}>
-              HTML5
+              Programming Languages
             </Typography>
-            <BorderLinearProgress
-              variant="determinate"
-              value={70}
-              sx={{ marginBottom: 2 }}
-            />
+            {programmingLanguages.map((item, index) => (
+              <Box key={index} pl={2}>
+                <Typography component="h4" variant="h4" align="left" mb={2}>
+                  {item.name} | {level(item.porcent)}
+                </Typography>
+                <BorderLinearProgress
+                  variant="determinate"
+                  value={item.porcent}
+                  sx={{ marginBottom: 2 }}
+                />
+              </Box>
+            ))}
             <Typography component="h4" variant="h4" align="left" mb={2}>
-              CSS / SASS
+              Frameworks
             </Typography>
-            <BorderLinearProgress
-              variant="determinate"
-              value={60}
-              sx={{ marginBottom: 2 }}
-            />
+            {frameworks.map((item, index) => (
+              <Box key={index} pl={2}>
+                <Typography component="h4" variant="h4" align="left" mb={2}>
+                  {item.name} | {level(item.porcent)}
+                </Typography>
+                <BorderLinearProgress
+                  variant="determinate"
+                  value={item.porcent}
+                  sx={{ marginBottom: 2 }}
+                />
+              </Box>
+            ))}
             <Typography component="h4" variant="h4" align="left" mb={2}>
-              React JS
+              Data Base
             </Typography>
-            <BorderLinearProgress
-              variant="determinate"
-              value={70}
-              sx={{ marginBottom: 2 }}
-            />
+            {database.map((item, index) => (
+              <Box key={index} pl={2}>
+                <Typography component="h4" variant="h4" align="left" mb={2}>
+                  {item.name} | {level(item.porcent)}
+                </Typography>
+                <BorderLinearProgress
+                  variant="determinate"
+                  value={item.porcent}
+                  sx={{ marginBottom: 2 }}
+                />
+              </Box>
+            ))}
             <Typography component="h4" variant="h4" align="left" mb={2}>
-              Node JS
+              Tools
             </Typography>
-            <BorderLinearProgress
-              variant="determinate"
-              value={70}
-              sx={{ marginBottom: 2 }}
-            />
+            <Typography component="h4" variant="h4" align="left" mb={2} ml={2}>
+              {skills.tools.map(
+                (item, index) =>
+                  `${item}${index !== skills.tools.length - 1 ? ',' : ''} `
+              )}
+            </Typography>
             <Typography component="h4" variant="h4" align="left" mb={2}>
-              FLUTTER
+              Languages
             </Typography>
-            <BorderLinearProgress
-              variant="determinate"
-              value={40}
-              sx={{ marginBottom: 2 }}
-            />
-            <Typography component="h4" variant="h4" align="left" mb={2}>
-              GraphQL
+            <Typography component="h5" variant="h5" align="left" mb={2}>
+              Native:{' '}
+              {skills.languages.native.map(
+                (item, index) =>
+                  `${item}${
+                    index !== skills.languages.native?.length! - 1 ? ',' : ''
+                  } `
+              )}
             </Typography>
-            <BorderLinearProgress
-              variant="determinate"
-              value={70}
-              sx={{ marginBottom: 2 }}
-            />
+            {skills.languages.avanced?.length! > 0 && (
+              <Typography component="h5" variant="h5" align="left" mb={2}>
+                Avanced:{' '}
+                {skills.languages.avanced!.map(
+                  (item, index) =>
+                    `${item}${
+                      index !== skills.languages.avanced?.length! - 1 ? ',' : ''
+                    } `
+                )}
+              </Typography>
+            )}
+            {skills.languages.intermediate?.length! > 0 && (
+              <Typography component="h5" variant="h5" align="left" mb={2}>
+                Intermediate:{' '}
+                {skills.languages.intermediate!.map(
+                  (item, index) =>
+                    `${item}${
+                      index !== skills.languages.intermediate?.length! - 1
+                        ? ','
+                        : ''
+                    } `
+                )}
+              </Typography>
+            )}
+            {skills.languages.basic?.length! > 0 && (
+              <Typography component="h5" variant="h5" align="left" mb={2}>
+                Basic:{' '}
+                {skills.languages.basic!.map(
+                  (item, index) =>
+                    `${item}${
+                      index !== skills.languages.basic?.length! - 1 ? ',' : ''
+                    } `
+                )}
+              </Typography>
+            )}
           </Grid>
         </Grid>
       </Container>

@@ -19,8 +19,12 @@ const HomeRoute = () => {
       <Header />
       <Home />
       <About />
-      <Resume />
-      <Contact socialMedia={data.social_medial} />
+      <Resume
+        experience={data.experience}
+        education={data.education}
+        skills={data.skills}
+      />
+      <Contact socialMedia={data.socialMedia} />
       <Demos />
       <UnderConstruction />
     </>
