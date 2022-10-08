@@ -22,9 +22,11 @@ const CustomGrid = styled(Grid)(({ theme }) => ({
   }
 }))
 
-interface IHomeProps {}
+interface IHomeProps {
+  introduction: string
+}
 
-const Home: React.FunctionComponent<IHomeProps> = (props) => {
+const Home: React.FunctionComponent<IHomeProps> = ({ introduction }) => {
   return (
     <Box
       id="Home"
@@ -96,10 +98,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                       align="left"
                       className="text-shadow-black"
                     >
-                      I am a Full Stack Developer. Well-qualified Full Stack
-                      Developer, familiar with wide range of programming
-                      utilities and languages. Knowledgeable of backend and
-                      frontend development requirements.
+                      {introduction}
                     </Typography>
                   </Grid>
                 </CustomBox>

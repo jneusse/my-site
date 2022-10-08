@@ -1,6 +1,7 @@
 import { Box, Container, Grid, LinearProgress, Typography } from '@mui/material'
 import { linearProgressClasses } from '@mui/material/LinearProgress'
 import { styled } from '@mui/material/styles'
+import { Link } from 'react-router-dom'
 
 const SectionBox = styled(Box)(
   ({ theme }) => `
@@ -36,7 +37,6 @@ type LanguagesValuesType = {
 
 type SkillValueType = {
   name: string
-  porcent: number
 }
 
 type SkillsType = {
@@ -70,6 +70,7 @@ type ExperienceType = {
   toDate?: string
   position?: string
   description?: string[]
+  techStack?: string
   projects?: ProjectType[]
 }
 interface IResumeProps {
@@ -78,22 +79,12 @@ interface IResumeProps {
   skills: SkillsType
 }
 
-const level = (value: number) => {
-  if (value <= 30) return 'Basic'
-  if (value <= 60) return 'Intermediate'
-  if (value >= 60) return 'Advanced'
-}
-
 const Resume: React.FunctionComponent<IResumeProps> = ({
   experience,
   education,
   skills
 }) => {
-  const programmingLanguages = skills.programmingLanguages.sort(
-    (a, b) => b.porcent - a.porcent
-  )
-  const frameworks = skills.frameworks.sort((a, b) => b.porcent - a.porcent)
-  const database = skills.database.sort((a, b) => b.porcent - a.porcent)
+  const { programmingLanguages, frameworks, database } = skills
   return (
     <SectionBox>
       <BoxId id="Resume" />
@@ -154,6 +145,16 @@ const Resume: React.FunctionComponent<IResumeProps> = ({
                     ))}
                   </ul>
                 )}
+                {item.techStack && (
+                  <Typography
+                    component="p"
+                    variant="body1"
+                    align="left"
+                    paragraph
+                  >
+                    Tech Stack: {item.techStack}
+                  </Typography>
+                )}
                 {item.projects && (
                   <Typography component="h5" variant="h5" align="left">
                     Projects
@@ -186,6 +187,22 @@ const Resume: React.FunctionComponent<IResumeProps> = ({
                             </li>
                           ))}
                         </ul>
+                        {itemProject.links && (
+                          <ul style={{ textAlign: 'left' }}>
+                            {itemProject.links.map((itemLink, i) => (
+                              <li className="item_description" key={i}>
+                                <a
+                                  href={itemLink}
+                                  target="_blank"
+                                  className="project_link"
+                                >
+                                  {itemLink}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                        <br></br>
                         {itemProject.techStack && (
                           <Typography
                             component="p"
@@ -212,57 +229,43 @@ const Resume: React.FunctionComponent<IResumeProps> = ({
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Programming Languages
             </Typography>
-            {programmingLanguages.map((item, index) => (
-              <Box key={index} pl={2}>
-                <Typography component="h4" variant="h4" align="left" mb={2}>
-                  {item.name} | {level(item.porcent)}
-                </Typography>
-                <BorderLinearProgress
-                  variant="determinate"
-                  value={item.porcent}
-                  sx={{ marginBottom: 2 }}
-                />
-              </Box>
-            ))}
+            <Box mb={2}>
+              {programmingLanguages.map((item, index) => (
+                <span className="skill" key={index}>
+                  {item.name}
+                </span>
+              ))}
+            </Box>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Frameworks
             </Typography>
-            {frameworks.map((item, index) => (
-              <Box key={index} pl={2}>
-                <Typography component="h4" variant="h4" align="left" mb={2}>
-                  {item.name} | {level(item.porcent)}
-                </Typography>
-                <BorderLinearProgress
-                  variant="determinate"
-                  value={item.porcent}
-                  sx={{ marginBottom: 2 }}
-                />
-              </Box>
-            ))}
+            <Box mb={2}>
+              {frameworks.map((item, index) => (
+                <span className="skill" key={index}>
+                  {item.name}
+                </span>
+              ))}
+            </Box>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Data Base
             </Typography>
-            {database.map((item, index) => (
-              <Box key={index} pl={2}>
-                <Typography component="h4" variant="h4" align="left" mb={2}>
-                  {item.name} | {level(item.porcent)}
-                </Typography>
-                <BorderLinearProgress
-                  variant="determinate"
-                  value={item.porcent}
-                  sx={{ marginBottom: 2 }}
-                />
-              </Box>
-            ))}
+            <Box mb={2}>
+              {database.map((item, index) => (
+                <span className="skill" key={index}>
+                  {item.name}
+                </span>
+              ))}
+            </Box>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Tools
             </Typography>
-            <Typography component="h4" variant="h4" align="left" mb={2} ml={2}>
-              {skills.tools.map(
-                (item, index) =>
-                  `${item}${index !== skills.tools.length - 1 ? ',' : ''} `
-              )}
-            </Typography>
+            <Box mb={2}>
+              {skills.tools.map((item, index) => (
+                <span className="skill" key={index}>
+                  {item}
+                </span>
+              ))}
+            </Box>
             <Typography component="h4" variant="h4" align="left" mb={2}>
               Languages
             </Typography>
