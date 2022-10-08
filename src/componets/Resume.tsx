@@ -1,7 +1,5 @@
-import { Box, Container, Grid, LinearProgress, Typography } from '@mui/material'
-import { linearProgressClasses } from '@mui/material/LinearProgress'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import { Link } from 'react-router-dom'
 
 const SectionBox = styled(Box)(
   ({ theme }) => `
@@ -17,16 +15,6 @@ const BoxId = styled(Box)(
     width: 100%;
 `
 )
-
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 10,
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.palette.primary.darker
-  },
-  [`& .${linearProgressClasses.bar}`]: {
-    backgroundColor: theme.palette.primary.main
-  }
-}))
 
 type LanguagesValuesType = {
   basic?: string[]
