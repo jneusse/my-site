@@ -32,9 +32,11 @@ const CustomTypo = styled(Typography)(
     `
 )
 
-interface IAboutProps {}
+interface IAboutProps {
+  about: string
+}
 
-const About: React.FunctionComponent<IAboutProps> = (props) => {
+const About: React.FunctionComponent<IAboutProps> = ({ about }) => {
   return (
     <>
       <Box id="About" height="64px"></Box>
@@ -46,15 +48,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
                 About me
               </Typography>
               <CustomTypo variant="h3" align="left" lang="en-US">
-                Well-qualified Full Stack Developer, familiar with wide range of
-                programming utilities and languages. Knowledgeable of backend
-                and frontend development requirements. Handles any part of
-                process with ease. Collaborative team player with excellent
-                technical abilities, offering 3 years of related experience.
-                Enthusiastic technical professional, with complete understanding
-                of entire software development lifecycle. Highly trained in
-                Backend and Frontend and known for having talents in Javascript
-                and HTML.
+                {about}
               </CustomTypo>
             </Grid>
             <Grid

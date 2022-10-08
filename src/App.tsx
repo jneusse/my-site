@@ -17,8 +17,8 @@ const HomeRoute = () => {
   return (
     <>
       <Header />
-      <Home />
-      <About />
+      <Home introduction={data.introduction} />
+      <About about={data.about} />
       <Resume
         experience={data.experience}
         education={data.education}
