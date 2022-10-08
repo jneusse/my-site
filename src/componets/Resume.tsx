@@ -183,6 +183,7 @@ const Resume: React.FunctionComponent<IResumeProps> = ({
                                   href={itemLink}
                                   target="_blank"
                                   className="project_link"
+                                  rel="noreferrer"
                                 >
                                   {itemLink}
                                 </a>
