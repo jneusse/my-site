@@ -30,9 +30,15 @@ const Demos = () => {
           height="100vh"
         >
           <Grid item>
-            <Grid container flexDirection="row" justifyContent="center" py={8}>
+            <Grid
+              container
+              flexDirection="row"
+              justifyContent="center"
+              py={8}
+              spacing={4}
+            >
               <Grid item>
-                <Card sx={{ maxWidth: '300px' }}>
+                <Card sx={{ width: '300px', height: '450px' }}>
                   <CardMedia
                     component="img"
                     height="300px"
@@ -56,6 +62,35 @@ const Demos = () => {
                     <Button size="large">
                       <Link
                         href="https://play.google.com/store/apps/details?id=com.jesusdev.movies_app"
+                        target="_blank"
+                      >
+                        Open
+                      </Link>
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item>
+                <Card sx={{ width: '300px', height: '450px' }}>
+                  <CardMedia
+                    component="img"
+                    height="300px"
+                    image="/img/my_store.png"
+                    alt="My store"
+                    sx={{ objectFit: 'center' }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      My store
+                    </Typography>
+                    <Typography variant="body2">
+                      This is a project in progress
+                    </Typography>
+                  </CardContent>
+                  <CardActions sx={{ justifyContent: 'center' }}>
+                    <Button size="large">
+                      <Link
+                        href="https://my-store.jesus-dev.com/"
                         target="_blank"
                       >
                         Open
