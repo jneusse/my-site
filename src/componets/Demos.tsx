@@ -14,7 +14,7 @@ import { styled } from '@mui/material/styles'
 
 const CustomBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.neutral.main,
-  height: '100vh',
+  minHeight: '100vh',
   width: '100%',
   position: 'relative'
 }))
@@ -23,12 +23,7 @@ const Demos = () => {
   return (
     <CustomBox id="Demos">
       <Container>
-        <Grid
-          container
-          flexDirection="column"
-          justifyContent="space-around"
-          height="100vh"
-        >
+        <Grid container flexDirection="column" justifyContent="space-around">
           <Grid item>
             <Grid
               container
