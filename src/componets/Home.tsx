@@ -67,7 +67,7 @@ const Home: React.FunctionComponent<IHomeProps> = ({ introduction }) => {
                 >
                   <CustomAvatar
                     alt="Jesus Eusse Developer"
-                    src="/img/me and github.png"
+                    src="/img/img1.png"
                     sx={{ width: '50vh', height: '50vh' }}
                     className="animate__animated animate__pulse animate__slow	 animate__infinite"
                   />
