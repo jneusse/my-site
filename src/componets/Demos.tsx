@@ -94,6 +94,32 @@ const Demos = () => {
                   </CardActions>
                 </Card>
               </Grid>
+              <Grid item>
+                <Card sx={{ width: '300px', height: '450px' }}>
+                  <CardMedia
+                    component="img"
+                    height="300px"
+                    image="/img/daph_web.png"
+                    alt="DAPh APP"
+                    sx={{ objectFit: 'center' }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      DAPh APP - Daily Awesome Phrases
+                    </Typography>
+                    <Typography variant="body2">
+                      This is a project in progress
+                    </Typography>
+                  </CardContent>
+                  <CardActions sx={{ justifyContent: 'center' }}>
+                    <Button size="large">
+                      <Link href="https://daph.jesus-dev.com/" target="_blank">
+                        Open
+                      </Link>
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
