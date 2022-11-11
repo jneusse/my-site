@@ -12,6 +12,14 @@ import {
 } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
+const BoxId = styled(Box)(
+  ({ theme }) => `
+    background-color: ${theme.palette.background.default};
+    height: 64px;
+    width: 100%;
+`
+)
+
 const CustomBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.neutral.main,
   minHeight: '100vh',
@@ -21,7 +29,8 @@ const CustomBox = styled(Box)(({ theme }) => ({
 
 const Demos = () => {
   return (
-    <CustomBox id="Demos">
+    <CustomBox>
+      <BoxId id="Demos" />
       <Container>
         <Grid container flexDirection="column" justifyContent="space-around">
           <Grid item>
@@ -88,6 +97,32 @@ const Demos = () => {
                         href="https://my-store.jesus-dev.com/"
                         target="_blank"
                       >
+                        Open
+                      </Link>
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item>
+                <Card sx={{ width: '300px', height: '450px' }}>
+                  <CardMedia
+                    component="img"
+                    height="300px"
+                    image="/img/daph_web.png"
+                    alt="DAPh APP"
+                    sx={{ objectFit: 'center' }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      DAPh APP - Daily Awesome Phrases
+                    </Typography>
+                    <Typography variant="body2">
+                      This is a project in progress
+                    </Typography>
+                  </CardContent>
+                  <CardActions sx={{ justifyContent: 'center' }}>
+                    <Button size="large">
+                      <Link href="https://daph.jesus-dev.com/" target="_blank">
                         Open
                       </Link>
                     </Button>
