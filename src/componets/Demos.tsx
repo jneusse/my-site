@@ -12,6 +12,14 @@ import {
 } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
+const BoxId = styled(Box)(
+  ({ theme }) => `
+    background-color: ${theme.palette.background.default};
+    height: 64px;
+    width: 100%;
+`
+)
+
 const CustomBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.neutral.main,
   minHeight: '100vh',
@@ -21,7 +29,8 @@ const CustomBox = styled(Box)(({ theme }) => ({
 
 const Demos = () => {
   return (
-    <CustomBox id="Demos">
+    <CustomBox>
+      <BoxId id="Demos" />
       <Container>
         <Grid container flexDirection="column" justifyContent="space-around">
           <Grid item>
