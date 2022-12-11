@@ -175,7 +175,7 @@
   "socialMedia": [
     {
       "type": "instagram",
-      "link": "http://www.instagram.com/yisusdev"
+      "link": "http://www.instagram.com/yisuseu"
     },
     {
       "type": "twitter",
@@ -187,7 +187,7 @@
     },
     {
       "type": "youtube",
-      "link": "https://www.youtube.com/channel/UCvGoiOncb9OSfE57csiw3dQ"
+      "link": "https://www.youtube.com/@charlanditopod"
     },
     {
       "type": "telegram",
@@ -196,6 +196,10 @@
     {
       "type": "github",
       "link": "https://github.com/jneusse"
+    },
+    {
+      "type": "email",
+      "link": "mailto:jesuseusse@gmail.com"
     }
   ]
 }
